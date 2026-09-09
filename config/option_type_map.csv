@@ -1,0 +1,13 @@
+pattern,option_type,priority
+mysuper|default|lifecycle|lifestage|smartpath|lifetime|life ?stage,Default,5
+high growth|aggressive|growth plus|shares plus|growth \+|all growth|100% growth,High Growth,10
+socially|ethical|sustainable|responsible|impact|conscious,Sustainable,12
+conservative|capital stable|defensive|stable|secure|moderate|income focus|capital guard|cautious,Conservative,15
+balanced growth|balanced,Balanced,20
+growth,Growth,25
+indexed|index|passive,Indexed,30
+cash|term deposit|money market,Cash,35
+australian shares|aus shares|australian equit,Single Sector,40
+international shares|global shares|international equit|overseas shares,Single Sector,40
+property|infrastructure|fixed interest|bonds|diversified bonds|credit|alternatives,Single Sector,45
+pension|retirement|income stream|ttr|transition,Pension,50

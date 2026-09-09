@@ -1,0 +1,44 @@
+# Publish the dashboard to GitHub Pages whenever main changes (e.g. after a refresh PR is merged).
+name: Deploy dashboard
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Rebuild per-fund holdings files from curated data
+        run: |
+          for s in $(ls curated | grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'); do
+            [ -f "curated/$s/holdings.parquet" ] && python -m pipeline.cli build --snapshot $s || true
+          done
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

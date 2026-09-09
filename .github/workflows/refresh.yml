@@ -1,0 +1,160 @@
+# Six-monthly refresh: harvest the latest Portfolio Holdings Disclosures and APRA statistics,
+# rebuild the dataset and dashboard, open a pull request with a QA report, and (if an Anthropic API
+# key is configured) hand any parsing failures to a Claude repair agent.
+#
+# Schedule: 5 April (for the 31 December snapshot, published by 31 March) and
+#           5 October (for the 30 June snapshot, published by 28 September). Also runnable by hand.
+name: Six-monthly refresh
+
+on:
+  schedule:
+    - cron: "0 20 4 4 *"    # 06:00 AEST 5 April
+    - cron: "0 20 4 10 *"   # 06:00 AEST 5 October
+  workflow_dispatch:
+    inputs:
+      snapshot:
+        description: "Reporting date to harvest (YYYY-MM-DD). Leave blank for the latest closed window."
+        required: false
+      only:
+        description: "Comma-separated fund_ids to limit the run (blank = all)"
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    outputs:
+      snapshot: ${{ steps.snap.outputs.snapshot }}
+      branch: ${{ steps.snap.outputs.branch }}
+      failures: ${{ steps.report.outputs.failures }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+      - id: snap
+        run: |
+          SNAP="${{ github.event.inputs.snapshot }}"
+          if [ -z "$SNAP" ]; then SNAP=$(python -c "from pipeline.registry import *; print(snapshot_id(latest_reporting_date()))"); fi
+          echo "snapshot=$SNAP" >> $GITHUB_OUTPUT
+          echo "branch=refresh/$SNAP" >> $GITHUB_OUTPUT
+          echo "Snapshot: $SNAP"
+      - name: Fetch reference seed files (Graeme's dataset) if not already present
+        run: |
+          mkdir -p seed
+          for f in super_holdings_dec2025.json apra_saa_dec2025.json; do
+            if [ ! -s "seed/$f" ]; then
+              curl -fsSL --retry 3 -o "seed/$f" "https://fund-scope-pro.lovable.app/data/$f" \
+                && python -c "import json,sys; json.load(open('seed/$f'))" \
+                || { echo "Could not fetch $f (non-fatal)"; rm -f "seed/$f"; }
+            fi
+          done
+          ls -la seed || true
+      - name: Import reference seed files if present (seed/super_holdings_dec2025.json)
+        run: |
+          if [ -f seed/super_holdings_dec2025.json ] && [ ! -f curated/2025-12-31/holdings.parquet ]; then
+            python -m pipeline.cli import-reference seed/super_holdings_dec2025.json $( [ -f seed/apra_saa_dec2025.json ] && echo seed/apra_saa_dec2025.json ) --snapshot 2025-12-31
+            python -m pipeline.cli build --snapshot 2025-12-31
+          fi
+      - name: Harvest PHD files
+        run: python -m pipeline.cli harvest --snapshot ${{ steps.snap.outputs.snapshot }} ${{ github.event.inputs.only && format('--only {0}', github.event.inputs.only) || '' }}
+      - name: APRA statistics
+        run: python -m pipeline.cli apra --snapshot ${{ steps.snap.outputs.snapshot }} || echo "APRA step failed (non-fatal)"
+      - name: Parse, normalise, validate
+        run: python -m pipeline.cli ingest --snapshot ${{ steps.snap.outputs.snapshot }} ${{ github.event.inputs.only && format('--only {0} --append', github.event.inputs.only) || '' }}
+      - name: Enrich (OpenFIGI + managers)
+        env:
+          OPENFIGI_API_KEY: ${{ secrets.OPENFIGI_API_KEY }}
+        run: python -m pipeline.cli enrich --snapshot ${{ steps.snap.outputs.snapshot }}
+      - name: Build dashboard data
+        run: python -m pipeline.cli build --snapshot ${{ steps.snap.outputs.snapshot }}
+      - name: Repair context + tests
+        id: report
+        run: |
+          python -m pipeline.cli repair-context --snapshot ${{ steps.snap.outputs.snapshot }}
+          python -m pytest -q tests || true
+          FAILS=$(python pipeline/count_failures.py ${{ steps.snap.outputs.snapshot }})
+          echo "failures=$FAILS" >> $GITHUB_OUTPUT
+      - name: Keep raw files as a workflow artifact (they are not committed)
+        uses: actions/upload-artifact@v4
+        with:
+          name: raw-${{ steps.snap.outputs.snapshot }}
+          path: raw/${{ steps.snap.outputs.snapshot }}
+          retention-days: 400
+      - name: Open pull request with the new snapshot
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: ${{ steps.snap.outputs.branch }}
+          title: "data: snapshot ${{ steps.snap.outputs.snapshot }}"
+          commit-message: "data: refresh snapshot ${{ steps.snap.outputs.snapshot }}"
+          body-path: reports/qa_${{ steps.snap.outputs.snapshot }}.md
+          add-paths: |
+            curated/**
+            site/data/**
+            reports/**
+            quarantine/**/reasons.json
+            config/**
+            seed/**
+          labels: data-refresh
+      - name: Open a repair issue when something failed
+        if: steps.report.outputs.failures != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const snap = '${{ steps.snap.outputs.snapshot }}';
+            const body = fs.readFileSync(`reports/repair_${snap}.md`, 'utf8').slice(0, 60000);
+            const hasKey = '${{ secrets.ANTHROPIC_API_KEY }}' !== '';
+            const intro = hasKey
+              ? `@claude Please work through the repair context below on branch \`refresh/${snap}\`, following the instructions in it, and open a pull request with the fixes.\n\n`
+              : `Parsing problems in snapshot ${snap}. Open this repository in Claude Code (or fix by hand) using the context below.\n\n`;
+            await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo,
+              title: `repair: ${snap} — ${{ steps.report.outputs.failures }} fund(s)/option(s) need attention`, body: intro + body, labels: ['repair'] });
+
+  repair:
+    # Claude Code agent: only runs when ANTHROPIC_API_KEY is configured and something failed.
+    needs: refresh
+    if: needs.refresh.outputs.failures != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Check for API key
+        id: key
+        run: echo "present=${{ secrets.ANTHROPIC_API_KEY != '' }}" >> $GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        if: steps.key.outputs.present == 'true'
+        with:
+          ref: ${{ needs.refresh.outputs.branch }}
+      - uses: actions/download-artifact@v4
+        if: steps.key.outputs.present == 'true'
+        with:
+          name: raw-${{ needs.refresh.outputs.snapshot }}
+          path: raw/${{ needs.refresh.outputs.snapshot }}
+      - uses: actions/setup-python@v5
+        if: steps.key.outputs.present == 'true'
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+        if: steps.key.outputs.present == 'true'
+      - name: Run Claude Code repair agent
+        if: steps.key.outputs.present == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            You are the maintenance agent for this superannuation holdings pipeline. Read reports/repair_${{ needs.refresh.outputs.snapshot }}.md
+            and fix every fund listed, following its "How to repair" instructions exactly: correct config/sources.csv URLs, add
+            adapters in pipeline/parse/adapters/__init__.py with fixtures and tests, or extend config/asset_class_map.csv.
+            After each fix run: python -m pipeline.cli ingest --snapshot ${{ needs.refresh.outputs.snapshot }} --only <fund_id> --append
+            then python -m pipeline.cli build --snapshot ${{ needs.refresh.outputs.snapshot }} and make test. Never edit files under raw/.
+            Never invent holdings. If a fund cannot be parsed, leave it quarantined and explain why in reports/repair_notes.md.
+            Commit your changes to the current branch with clear messages.
+          claude_args: "--max-turns 60"

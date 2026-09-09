@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+raw/*/
+!raw/.gitkeep
+curated/*.duckdb
+curated/security_master.parquet
+quarantine/*/
+site/data/*/holdings/
+.DS_Store

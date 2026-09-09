@@ -1,0 +1,20 @@
+pattern,apra_asset_class,bucket,is_listed,priority
+cash|bank bill|term deposit|money market|at call,Cash,Cash,0,10
+australian.*(fixed|bond|fixed interest|fixed income|credit|debt),Australian Fixed Income,Australian Fixed Income,0,20
+(international|global|overseas|foreign).*(fixed|bond|fixed interest|fixed income|credit|debt),International Fixed Income,International Fixed Income,0,20
+private (debt|credit)|direct lending|loans,Private Credit,Australian Fixed Income,0,25
+fixed (interest|income)|bonds|credit|debt,Fixed Income,Australian Fixed Income,0,30
+(australian.*(equit|share)|(equit|share).*australian|asx|domestic (equit|share)),Australian Equity,Australian Equity,1,20
+((international|global|overseas|emerging|developed|foreign).*(equit|share)|(equit|share).*(international|global|overseas|emerging|developed|foreign)),International Equity,International Equity,1,20
+(listed )?(equit|share)s?( ?- ?)?(hedged|unhedged)?$,International Equity,International Equity,1,40
+private equity|unlisted equit|venture|buyout|growth equity,Private Equity,Private Equity,0,15
+australian.*unlisted.*property|unlisted property|direct property|property.*(direct|unlisted|unitised),Australian Unlisted Property,Property,0,15
+(?<!un)listed property|reit|a-reit|g-reit|property securities,Australian Listed Property,Property,1,20
+(international|global).*(unlisted )?property,International Unlisted Property,Property,0,22
+property|real estate,Australian Unlisted Property,Property,0,50
+(?<!un)listed infrastructure|infrastructure securities,International Listed Infrastructure,Infrastructure,1,20
+(international|global).*infrastructure,International Unlisted Infrastructure,Infrastructure,0,22
+infrastructure|unlisted infra,Australian Unlisted Infrastructure,Infrastructure,0,30
+alternative|hedge fund|absolute return|multi-asset|diversified strateg|commodit|insurance-linked|natural capital|timber|agricultur|opportunistic,Alternatives,Alternatives,0,30
+derivative|future|forward|option|swap|fx|currency overlay,Derivatives,Other,0,10
+other|unclassified,Other,Other,0,90

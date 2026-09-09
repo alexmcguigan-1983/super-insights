@@ -1,0 +1,32 @@
+bucket,management_type,strategy_family,fee_bps_low,fee_bps_high,note
+Australian Equity,Internal,,3,8,Internal team cost estimate
+Australian Equity,External,Index,2,6,Passive mandate
+Australian Equity,External,Active Equity,25,45,Active segregated mandate
+Australian Equity,External,Systematic,12,30,Quant/systematic mandate
+Australian Equity,External,,20,40,Unknown style default
+International Equity,Internal,,3,8,Internal team cost estimate
+International Equity,External,Index,2,6,Passive mandate
+International Equity,External,Active Equity,30,50,Active segregated mandate
+International Equity,External,Systematic,15,30,Quant/systematic mandate
+International Equity,External,,25,45,Unknown style default
+Australian Fixed Income,Internal,,2,6,
+Australian Fixed Income,External,Index,3,8,
+Australian Fixed Income,External,Fixed Income,10,25,
+Australian Fixed Income,External,Private Credit,60,120,Base fee excluding performance fee
+Australian Fixed Income,External,,10,25,
+International Fixed Income,Internal,,2,6,
+International Fixed Income,External,Index,3,8,
+International Fixed Income,External,Fixed Income,12,30,
+International Fixed Income,External,Credit,25,60,
+International Fixed Income,External,Private Credit,60,120,Base fee excluding performance fee
+International Fixed Income,External,,15,35,
+Infrastructure,Internal,,10,25,
+Infrastructure,External,,60,110,Unlisted infrastructure base fee
+Property,Internal,,10,25,
+Property,External,,45,90,Unlisted property base fee
+Private Equity,External,,100,200,Base fee; carry excluded
+Private Equity,Internal,,15,40,Direct/co-investment programme
+Alternatives,External,,60,150,
+Cash,Internal,,1,3,
+Cash,External,,3,8,
+Other,External,,10,50,

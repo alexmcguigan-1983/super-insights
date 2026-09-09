@@ -1,0 +1,51 @@
+Asset class,Management,Name of investment item,ISIN/Ticker,Units,Market value $AUD,Weighting %,Currency
+Cash,,Commonwealth Bank of Australia,Cash,1276771.0,89085217.1,8.4811,Ca
+Cash,,Westpac Banking Corp,Cash,2621086.0,66607871.44,6.3412,Ca
+Cash,,ANZ Banking Group,Term deposit,116358.0,45256131.72,4.3085,Te
+Cash,,BNP Paribas SA (Australia),Cash,221266.0,59050779.74,5.6217,Ca
+Fixed income,Internally managed,Commonwealth of Australia 3.00% 21/11/2033,AU3TB0000200,332354.0,43647112.79,4.1553,AUD
+Fixed income,Internally managed,Treasury Corp of Victoria 4.25% 20/12/2032,AU3SG0002199,584721.0,65140812.51,6.2015,AUD
+Fixed income,Internally managed,Queensland Treasury Corp 3.50% 21/08/2030,AU3SG0001878,159559.0,38748363.96,3.6889,AUD
+Fixed income,Internally managed,NSW Treasury Corp 3.00% 20/02/2030,AU3SG0001621,521878.0,61873177.38,5.8904,AUD
+Fixed income,Internally managed,Westpac Banking Corp FRN 2029,AU3FN0071234,331795.0,59465947.68,5.6613,AUD
+Fixed income,Internally managed,United States Treasury 4.00% 15/02/2034,US91282CJZ59,386564.0,26985281.87,2.569,US
+Fixed income,Internally managed,Bundesrepublik Deutschland 2.30% 15/02/2033,DE000BU2Z015,79658.0,29139303.81,2.7741,DE
+Fixed income,Externally managed,PIMCO Australia Pty Ltd,,,39000000.0,3.7129,AUD
+Fixed income,Externally managed,Ardea,,,23400000.0,2.2277,AUD
+Listed equity - Australian,Internally managed,Commonwealth Bank of Australia,AU000000CBA7,419012.0,9006379.29,0.8574,AUD
+Listed equity - Australian,Internally managed,BHP Group Ltd,AU000000BHP4,32267.0,10444252.48,0.9943,AUD
+Listed equity - Australian,Internally managed,CSL Ltd,AU000000CSL8,142339.0,12168810.8,1.1585,AUD
+Listed equity - Australian,Internally managed,National Australia Bank,AU000000NAB4,82981.0,16590117.13,1.5794,AUD
+Listed equity - Australian,Internally managed,Westpac Banking Corp,AU000000WBC1,33586.0,9927210.36,0.9451,AUD
+Listed equity - Australian,Internally managed,Macquarie Group,AU000000MQG1,72475.0,16775047.35,1.597,AUD
+Listed equity - Australian,Internally managed,Wesfarmers,AU000000WES1,76757.0,11043332.6,1.0513,AUD
+Listed equity - Australian,Internally managed,Woodside Energy,AU0000224040,52813.0,11459030.57,1.0909,AUD
+Listed equity - Australian,Internally managed,Fortescue,AU000000FMG4,49096.0,11344438.51,1.08,AUD
+Listed equity - Australian,Internally managed,Transurban Group,AU000000TCL6,13805.0,4390405.42,0.418,AUD
+Listed equity - Australian,Internally managed,Goodman Group,AU000000GMG5,169024.0,10195791.64,0.9707,AUD
+Listed equity - Australian,Internally managed,Rio Tinto Ltd,AU000000RIO1,28574.0,6655183.84,0.6336,AUD
+Listed equity - International (unhedged),Internally managed,NVIDIA CORP COMMON STOCK USD,US67066G1040,35385.0,7135510.13,0.6793,US
+Listed equity - International (unhedged),Internally managed,MICROSOFT CORP COMMON STOCK USD,US5949181045,19867.0,7505269.32,0.7145,US
+Listed equity - International (unhedged),Internally managed,APPLE INC COMMON STOCK USD,US0378331005,48825.0,13949333.0,1.328,US
+Listed equity - International (unhedged),Internally managed,ALPHABET INC CLASS A,US02079K3059,29760.0,10507768.54,1.0004,US
+Listed equity - International (unhedged),Internally managed,AMAZON.COM INC,US0231351067,29655.0,11210469.34,1.0673,US
+Listed equity - International (unhedged),Internally managed,TAIWAN SEMICONDUCTOR MANUFACTURING,TW0002330008,116227.0,13789735.86,1.3128,TW
+Listed equity - International (unhedged),Internally managed,NESTLE SA REG,CH0038863350,67810.0,15773582.94,1.5017,CH
+Listed equity - International (unhedged),Internally managed,ASML HOLDING NV,NL0010273215,25550.0,9669118.23,0.9205,NL
+Listed equity - International (unhedged),Internally managed,TOYOTA MOTOR CORP,JP3633400001,34998.0,11871320.65,1.1302,JP
+Listed equity - International (unhedged),Internally managed,SAMSUNG ELECTRONICS CO LTD,KR7005930003,145327.0,10479657.32,0.9977,KR
+Listed equity - International (unhedged),Internally managed,HSBC HOLDINGS PLC,GB0005405286,159562.0,10565627.01,1.0059,GB
+Listed equity - International (unhedged),Internally managed,TENCENT HOLDINGS LTD,KYG875721634,68693.0,12914704.59,1.2295,KY
+Listed equity - International (unhedged),Internally managed,NOVO NORDISK A/S,DK0062498333,205760.0,9787468.74,0.9318,DK
+Listed equity - International (unhedged),Internally managed,SHELL PLC,GB00BP6MXD84,97274.0,10840434.35,1.032,GB
+Unlisted infrastructure,Externally managed,IFM Investors Pty Ltd,,,33854166.67,3.223,AUD
+Unlisted infrastructure,Externally managed,Macquarie Asset Management,,,18958333.33,1.8049,AUD
+Unlisted infrastructure,Externally managed,Global Infrastructure Partners,,,12187500.0,1.1603,AUD
+Unlisted property,Externally managed,ISPT,,,23111111.11,2.2002,AUD
+Unlisted property,Externally managed,Charter Hall Funds Management Limited,,,17333333.33,1.6502,AUD
+Unlisted property,Externally managed,Dexus,,,11555555.56,1.1001,AUD
+Private equity,Externally managed,StepStone Group,,,0.0,0.0,AUD
+Private equity,Externally managed,Kohlberg Kravis Roberts & Co LP,,,0.0,0.0,AUD
+Private equity,Externally managed,Blackbird Ventures Pty Limited,,,0.0,0.0,AUD
+Alternatives,Externally managed,"Fermat Capital Management, LLC",,,0.0,0.0,AUD
+Alternatives,Externally managed,Tangency Capital Limited,,,0.0,0.0,AUD

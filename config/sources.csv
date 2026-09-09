@@ -1,0 +1,31 @@
+fund_id,fund_name,rse_abn,fund_type,phd_landing_url,expected_format,discovery_keywords,notes,verified
+australiansuper,AustralianSuper,,Industry,https://www.australiansuper.com/investments/what-we-invest-in,xlsx|csv,portfolio holdings;holdings disclosure,Largest fund; per-option files,no
+art,Australian Retirement Trust,,Industry,https://www.australianretirementtrust.com.au/disclaimers-and-disclosures,xlsx|csv,portfolio holdings;holdings disclosure,Two divisions (Super Savings and QSuper),no
+aware,Aware Super,,Public Sector,https://aware.com.au/member/what-we-offer/investments/what-we-invest-in/portfolio-holdings-disclosure,xlsx,portfolio holdings;phd,One xlsx per option (e.g. Accumulation-Socially-Conscious.xlsx),no
+hostplus,Hostplus,,Industry,https://hostplus.com.au/investment/investment-governance,csv|pdf,investment holdings disclosure;portfolio holdings,One file per asset class; CSV and PDF variants,no
+unisuper,UniSuper,,Industry,https://www.unisuper.com.au/investments/our-investment-options/option-holdings,xlsx|csv,option holdings;portfolio holdings,Files served from /api/sitecore/investment/GetPortfolioHoldingsFile,no
+rest,Rest Super,,Industry,https://rest.com.au/investments/how-we-invest/investment-managers,csv,portfolio holdings disclosure,CSV per option per Schedule 8D table (e.g. super-australian-shares-indexed-table3.csv); also publishes a manager list,no
+cbus,Cbus,,Industry,https://www.cbussuper.com.au/super/my-investment-options/cbus-investment-holdings,csv,investment holdings;portfolio holdings,CSV per option (e.g. super-conservative.csv); listed equities table needs care,no
+hesta,HESTA,,Industry,https://www.hesta.com.au/members/investments/our-portfolio-holdings,xlsx|csv,portfolio holdings,,no
+cfs,Colonial First State FirstChoice,,Retail,https://www.cfs.com.au/personal/resources/funds-and-performance/portfolio-holdings,xlsx|csv,portfolio holdings,Retail platform; many options,no
+mercer,Mercer Super Trust,,Retail,https://www.mercersuper.com.au/investments/how-your-super-is-invested/,xlsx|pdf,portfolio holdings disclosure,,no
+mlc,MLC Super Fund (Insignia),,Retail,https://www.mlc.com.au/personal/superannuation/portfolio-holdings-disclosure,xlsx|csv,portfolio holdings,,no
+amp,AMP Super Fund,,Retail,https://www.amp.com.au/superannuation/portfolio-holdings,xlsx|csv,portfolio holdings,,no
+caresuper,CARE Super,,Industry,https://www.caresuper.com.au/members/investments/how-we-invest/portfolio-holdings,xlsx|csv,portfolio holdings,Merged with Spirit Super Nov 2024,no
+csc_pssap,Commonwealth Superannuation Corporation (PSSap),,Public Sector,https://www.csc.gov.au/Members/Investment/Portfolio-holdings,xlsx|csv,portfolio holdings,,no
+brighter,Brighter Super,,Public Sector,https://www.brightersuper.com.au/investments/portfolio-holdings,xlsx|csv,portfolio holdings,,no
+equip,Equip Super,,Industry,https://www.equipsuper.com.au/investments/portfolio-holdings,xlsx|csv,portfolio holdings,Includes Catholic Super,no
+vision,Vision Super,,Industry,https://www.visionsuper.com.au/investments/portfolio-holdings-disclosure,xlsx|csv,portfolio holdings,Merged with Active Super 2025,no
+team,Team Super,,Industry,https://www.teamsuper.com/investments/portfolio-holdings,xlsx|csv,portfolio holdings,Formerly Mine Super + TWUSUPER,no
+telstra,TelstraSuper,,Corporate,https://www.telstrasuper.com.au/investments/portfolio-holdings,xlsx|csv,portfolio holdings,,no
+ngs,NGS Super,,Industry,https://www.ngssuper.com.au/investments/portfolio-holdings,xlsx|csv,portfolio holdings,,no
+prime,Prime Super,,Industry,https://www.primesuper.com.au/investments/,xlsx,portfolio holdings;PHD,Files named PHD-<Month>-<Year>-Super-<Option>.xlsx linked from each option page,no
+bussq,BUSSQ,,Industry,https://www.bussq.com.au/investments/responsible-investing,powerbi,portfolio holdings,Live Power BI dashboard; no as-at date in UI,no
+legalsuper,legalsuper,,Industry,https://www.legalsuper.com.au/investments/portfolio-holdings,xlsx|csv,portfolio holdings,,no
+guild,GuildSuper,,Retail,https://www.guildsuper.com.au/investments/portfolio-holdings,xlsx|csv,portfolio holdings,,no
+firstsuper,First Super,,Industry,https://www.firstsuper.com.au/investments/portfolio-holdings,xlsx|csv,portfolio holdings,,no
+australianethical,Australian Ethical Super,,Retail,https://www.australianethical.com.au/super/portfolio-holdings/,xlsx|csv,portfolio holdings,Publishes in RIAA-style format,no
+futuresuper,Future Super,,Retail,https://www.futuresuper.com.au/portfolio-holdings,xlsx|csv,portfolio holdings,No MySuper product; related-party pooled vehicles,no
+smartmonday,smartMonday,,Retail,https://www.smartmonday.com.au/portfolio-holdings,xlsx|csv,portfolio holdings,,no
+vanguard,Vanguard Super,,Retail,https://www.vanguard.com.au/super/portfolio-holdings,xlsx|csv,portfolio holdings,,no
+reisuper,Rei Super,,Industry,https://www.reisuper.com.au/investments/portfolio-holdings,xlsx|csv,portfolio holdings,,no
