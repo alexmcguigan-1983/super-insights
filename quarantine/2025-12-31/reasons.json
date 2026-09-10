@@ -1,0 +1,1984 @@
+[
+  {
+    "fund_id": "aware",
+    "option_name": "Accumulation Property",
+    "passed": false,
+    "reasons": [
+      "G3 32.5% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 347,
+    "total_aud": 329693274.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Table1",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 162783.3% (expected ~100%)",
+      "G3 45.2% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 53366,
+    "total_aud": 159191111703.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Ifa Australian Equities",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 64.1% (expected ~100%)",
+      "G3 93.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 294,
+    "total_aud": 6262600.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Accumulation Balanced",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11543.4% (expected ~100%)"
+    ],
+    "rows": 2392,
+    "total_aud": 19079465044.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Ifb Moderate",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 73.9% (expected ~100%)",
+      "G3 76.8% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1834,
+    "total_aud": 332373950.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Pension International Shares",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 62.6% (expected ~100%)",
+      "G3 99.1% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1225,
+    "total_aud": 610011551.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Pension Conservative Balanced Indexed",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 42.9% (expected ~100%)",
+      "G3 56.7% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1531,
+    "total_aud": 369963162.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Accumulation Defensive",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11522.2% (expected ~100%)"
+    ],
+    "rows": 2421,
+    "total_aud": 2139813415.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Ifb Australian Equities",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 64.1% (expected ~100%)",
+      "G3 93.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 294,
+    "total_aud": 16515907.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Pension Conservative Balanced",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11534.6% (expected ~100%)"
+    ],
+    "rows": 1579,
+    "total_aud": 12652477997.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Ifa Balanced",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 85.5% (expected ~100%)",
+      "G3 89.3% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1834,
+    "total_aud": 261920933.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Ifa Capital Stable",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 59.5% (expected ~100%)",
+      "G3 61.7% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1831,
+    "total_aud": 128773512.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Accumulation Balanced Socially Conscious",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11519.1% (expected ~100%)",
+      "G3 76.3% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 933,
+    "total_aud": 2078815739.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Pension Conservative Socially Conscious",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11528.9% (expected ~100%)"
+    ],
+    "rows": 982,
+    "total_aud": 319002857.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Pension Conservative",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11530.6% (expected ~100%)"
+    ],
+    "rows": 1578,
+    "total_aud": 5307943584.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Accumulation International Shares",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 62.6% (expected ~100%)",
+      "G3 99.1% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1225,
+    "total_aud": 2764738965.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Accumulation High Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11528.3% (expected ~100%)",
+      "G3 83.3% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 2657,
+    "total_aud": 71632835289.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Pension Balanced",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11542.7% (expected ~100%)"
+    ],
+    "rows": 2392,
+    "total_aud": 4386552074.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Ifa Moderate",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 73.9% (expected ~100%)",
+      "G3 76.8% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1834,
+    "total_aud": 220369136.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Pension Property",
+    "passed": false,
+    "reasons": [
+      "G3 32.5% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 347,
+    "total_aud": 55638399.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Ifb Capital Stable",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 59.5% (expected ~100%)",
+      "G3 61.7% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1831,
+    "total_aud": 127845759.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Accumulation Conservative Balanced",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11539.8% (expected ~100%)"
+    ],
+    "rows": 2428,
+    "total_aud": 18207669368.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Accumulation Conservative",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11534.3% (expected ~100%)"
+    ],
+    "rows": 2421,
+    "total_aud": 1560822290.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Accumulation High Growth Indexed",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 66.6% (expected ~100%)",
+      "G3 88.9% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1531,
+    "total_aud": 1248950833.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Ifa International Equities",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 50.5% (expected ~100%)",
+      "G3 96.3% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1239,
+    "total_aud": 7423561.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Ifb Balanced",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 85.5% (expected ~100%)",
+      "G3 89.3% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1834,
+    "total_aud": 403793228.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Pension Australian Shares",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 65.3% (expected ~100%)",
+      "G3 98.8% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 295,
+    "total_aud": 463610290.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Pension Conservative Indexed",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 27.7% (expected ~100%)",
+      "G3 37.5% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1531,
+    "total_aud": 110133284.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Ifa Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 85.6% (expected ~100%)",
+      "G3 90.3% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1831,
+    "total_aud": 95597509.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Pension High Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11528.1% (expected ~100%)",
+      "G3 82.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 2348,
+    "total_aud": 1203436604.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Ifb Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 85.6% (expected ~100%)",
+      "G3 90.3% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1831,
+    "total_aud": 127013585.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Accumulation High Growth Socially Conscious",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11529.0% (expected ~100%)",
+      "G3 90.8% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 931,
+    "total_aud": 863831187.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Ifb International Equities",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 50.5% (expected ~100%)",
+      "G3 96.3% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1239,
+    "total_aud": 19253224.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Accumulation Australian Shares",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 65.3% (expected ~100%)",
+      "G3 98.8% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 295,
+    "total_aud": 1525591060.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Pension Defensive",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11518.7% (expected ~100%)"
+    ],
+    "rows": 1578,
+    "total_aud": 3221293885.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Pension Conservative Balanced Socially Conscious",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 11536.0% (expected ~100%)"
+    ],
+    "rows": 984,
+    "total_aud": 1585777797.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Accumulation Balanced Indexed",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 54.7% (expected ~100%)",
+      "G3 74.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1531,
+    "total_aud": 555643145.0
+  },
+  {
+    "fund_id": "aware",
+    "option_name": "Aware Faqs",
+    "passed": false,
+    "reasons": [
+      "G3 50.0% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G6 reporting date ['2021-11-28'] differs from snapshot 2025-12-31"
+    ],
+    "rows": 4,
+    "total_aud": 8096.0
+  },
+  {
+    "fund_id": "hostplus",
+    "option_name": "Balanced (whole-of-fund)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 27351.9% (expected ~100%)",
+      "G6 reporting date ['2025-07-28'] differs from snapshot 2025-12-31"
+    ],
+    "rows": 151095,
+    "total_aud": 75060203140.2601
+  },
+  {
+    "fund_id": "hostplus",
+    "option_name": "Pension (whole-of-plan)",
+    "passed": false,
+    "reasons": [
+      "G3 43.1% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 402,
+    "total_aud": 629524870.69
+  },
+  {
+    "fund_id": "rest",
+    "option_name": "Rest Retire360 Fsg",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 9844.0% (expected ~100%)",
+      "G3 100.0% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G6 reporting date ['2026-04-28'] differs from snapshot 2025-12-31"
+    ],
+    "rows": 8,
+    "total_aud": 13606.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Super High Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 77.9% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1953,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Retirement Property",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 18.7% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 33,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Retirement Growth Plus",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 71.2% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1954,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Super Conservative",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 24.2% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1954,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Ttr High Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 77.9% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1953,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Retirement Conservative Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 45.8% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1954,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Ttr Conservative Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 45.8% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1954,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Ttr Australian Shares",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 89.1% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 296,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Super Conservative Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 45.8% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1954,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Super Australian Shares",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 89.1% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 296,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Ttr Conservative",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 24.2% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1954,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Retirement Diversified Fixed Interest",
+    "passed": false,
+    "reasons": [
+      "G3 100.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 7,
+    "total_aud": 31188797.44
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Retirement Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 63.6% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1954,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Retirement Overseas Shares",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 89.5% (expected ~100%)",
+      "G3 100.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1282,
+    "total_aud": 1446592.3799999994
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Ttr Overseas Shares",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 89.5% (expected ~100%)",
+      "G3 100.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1282,
+    "total_aud": 93205.62
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Retirement Australian Shares",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 89.1% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 296,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Csm",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 63.5% (expected ~100%)",
+      "G3 100.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 463,
+    "total_aud": 3547060.49
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Super Overseas Shares",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 89.5% (expected ~100%)",
+      "G3 100.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1282,
+    "total_aud": 17157724.68
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Super Growth Plus",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 71.1% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1954,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Super Indexed Diversified",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 64.5% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 15,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Ttr Indexed Diversified",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 64.5% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 15,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Retirement Conservative",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 24.2% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1954,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Retirement High Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 78.0% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1953,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Ttr Diversified Fixed Interest",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to -0.2% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 18,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Ttr Property",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 18.7% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 33,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Super Diversified Fixed Interest",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to -0.2% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 18,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Retirement Indexed Diversified",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 64.5% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 15,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Ttr Growth Plus",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 71.1% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1954,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Super Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 63.1% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1957,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Super Property",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 18.7% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 33,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "cbus",
+    "option_name": "Ttr Growth",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 63.6% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 1954,
+    "total_aud": 0.0
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Property And Infrastructure Income Stream Assets",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 18.5% (expected ~100%)"
+    ],
+    "rows": 48,
+    "total_aud": 24462304.546956997
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Balanced Growth Income Stream Assets",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 58.4% (expected ~100%)",
+      "G5 only 23 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 23,
+    "total_aud": 52148397.515668996
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Property And Infrastructure Super Assets",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 18.5% (expected ~100%)"
+    ],
+    "rows": 48,
+    "total_aud": 427007352.988425
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Sustainable Growth Super Assets",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 0.0% (expected ~100%)",
+      "G5 only 15 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 15,
+    "total_aud": 26095644.332417004
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Diversified Bonds Super Assets",
+    "passed": false,
+    "reasons": [
+      "G3 negative bucket(s): Cash"
+    ],
+    "rows": 178,
+    "total_aud": 218310469.42110395
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Diversified Bonds Income Stream Assets",
+    "passed": false,
+    "reasons": [
+      "G3 negative bucket(s): Cash"
+    ],
+    "rows": 178,
+    "total_aud": 31989548.901353985
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Australian Shares Income Stream Assets",
+    "passed": false,
+    "reasons": [
+      "G3 90.4% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 342,
+    "total_aud": 155327888.87348306
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "High Growth Income Stream Assets",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 58.4% (expected ~100%)",
+      "G5 only 20 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 20,
+    "total_aud": 2243551.668774
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Conservative Super Assets",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 58.4% (expected ~100%)",
+      "G5 only 24 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 24,
+    "total_aud": 186608986.804021
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Australian Shares Super Assets",
+    "passed": false,
+    "reasons": [
+      "G3 90.4% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 342,
+    "total_aud": 2034006978.1103666
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "International Shares Income Stream Assets",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to -0.0% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 13,
+    "total_aud": -12046.282271999999
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Indexed Balanced Growth Income Stream Assets",
+    "passed": false,
+    "reasons": [
+      "G3 70.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1985,
+    "total_aud": 197513577.0600599
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "High Growth Super Assets",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 58.4% (expected ~100%)",
+      "G5 only 20 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 20,
+    "total_aud": 26251736.672152
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Conservative Income Stream Assets",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 58.4% (expected ~100%)",
+      "G5 only 24 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 24,
+    "total_aud": 236272526.071247
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Sustainable Growth Income Stream Assets",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 0.0% (expected ~100%)",
+      "G5 only 15 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 15,
+    "total_aud": 4453627.829809
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Balanced Growth Super Assets",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 58.4% (expected ~100%)",
+      "G5 only 24 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 24,
+    "total_aud": 1859436588.615874
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "Indexed Balanced Growth Super Assets",
+    "passed": false,
+    "reasons": [
+      "G3 70.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1985,
+    "total_aud": 613261596.8495916
+  },
+  {
+    "fund_id": "hesta",
+    "option_name": "International Shares Super Assets",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to -0.0% (expected ~100%)",
+      "G3 no market values parsed"
+    ],
+    "rows": 13,
+    "total_aud": -174435.67894800004
+  },
+  {
+    "fund_id": "mercer",
+    "option_name": "Msal Financialservicesguide",
+    "passed": false,
+    "reasons": [
+      "G3 100.0% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G6 reporting date ['2026-03-28'] differs from snapshot 2025-12-31"
+    ],
+    "rows": 2,
+    "total_aud": 426.0
+  },
+  {
+    "fund_id": "amp",
+    "option_name": "12H",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 4955.1% (expected ~100%)",
+      "G6 reporting date ['2019-06-30', '2020-06-30', '2023-06-30', '2026-06-30', '2027-06-30'] differs from snapshot 2025-12-31"
+    ],
+    "rows": 957,
+    "total_aud": 4607.457999999997
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Alternative Growth (A)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)"
+    ],
+    "rows": 1657,
+    "total_aud": 141063878.00019997
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Balanced (A)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)",
+      "G3 47.3% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1756,
+    "total_aud": 44533829371.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Capitale Stable (A)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)"
+    ],
+    "rows": 1662,
+    "total_aud": 911902497.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Conservative Balanced (A)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)",
+      "G3 36.1% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1662,
+    "total_aud": 1004885923.9999999
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Growth (A)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)",
+      "G3 67.7% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1615,
+    "total_aud": 4553207805.999802
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Property (A)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 5.5% (expected ~100%)"
+    ],
+    "rows": 102,
+    "total_aud": 140098308.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Sustainable Balanced (A)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)",
+      "G3 49.8% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 593,
+    "total_aud": 533268397.9999
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Defined Benefit (LCC HCC)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)",
+      "G3 36.1% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1662,
+    "total_aud": 94561529.00010003
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Defined Benefits (Quadrant)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)",
+      "G3 36.1% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1662,
+    "total_aud": 42301661.99999999
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Alternative Growth (P)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)"
+    ],
+    "rows": 1655,
+    "total_aud": 20551951.999799997
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Balanced (P)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)",
+      "G3 47.9% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1662,
+    "total_aud": 2830627477.0001006
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Capital Stable (P)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)"
+    ],
+    "rows": 1662,
+    "total_aud": 783727501.9999
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Conservative Balanced (P)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)",
+      "G3 35.5% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1662,
+    "total_aud": 1089681589.9998999
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Growth (P)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)",
+      "G3 63.8% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1615,
+    "total_aud": 321148980.99999994
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Long Term (P)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)",
+      "G3 32.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1645,
+    "total_aud": 89007820.00009999
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Property (P)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 5.5% (expected ~100%)"
+    ],
+    "rows": 101,
+    "total_aud": 9124651.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Sustainable Balanced (P)",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 6.4% (expected ~100%)",
+      "G3 47.7% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 593,
+    "total_aud": 226306916.00010002
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Direct Investment Option",
+    "passed": false,
+    "reasons": [
+      "G3 67.5% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 465,
+    "total_aud": 231205588.0001
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Conservative Balanced A Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 634.2% (expected ~100%)"
+    ],
+    "rows": 1553,
+    "total_aud": 291625813.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Sustainable Balanced A Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 634.9% (expected ~100%)"
+    ],
+    "rows": 553,
+    "total_aud": 119387555.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Defined Benefit Lcc Hcc Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 634.2% (expected ~100%)"
+    ],
+    "rows": 1553,
+    "total_aud": 27430886.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Property P Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 534.0% (expected ~100%)"
+    ],
+    "rows": 99,
+    "total_aud": 1357452.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Capital Stable A Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 633.9% (expected ~100%)"
+    ],
+    "rows": 1553,
+    "total_aud": 340989711.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Growth P Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 636.7% (expected ~100%)"
+    ],
+    "rows": 1508,
+    "total_aud": 58680762.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Property A Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 534.0% (expected ~100%)"
+    ],
+    "rows": 100,
+    "total_aud": 20838919.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Conservative Balanced P Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 634.4% (expected ~100%)"
+    ],
+    "rows": 1553,
+    "total_aud": 316123346.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Fixed Interest P Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 78.0% (expected ~100%)"
+    ],
+    "rows": 105,
+    "total_aud": 8870707.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Australian Shares A Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 95.7% (expected ~100%)",
+      "G3 34.6% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 258,
+    "total_aud": 147535921.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Defined Benefit Quadrant Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 634.2% (expected ~100%)"
+    ],
+    "rows": 1553,
+    "total_aud": 12276457.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Alternative Growth A Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 633.2% (expected ~100%)"
+    ],
+    "rows": 1548,
+    "total_aud": 37607621.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Fixed Interest A Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 78.0% (expected ~100%)"
+    ],
+    "rows": 105,
+    "total_aud": 40546583.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Overseas Shares P Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 92.2% (expected ~100%)"
+    ],
+    "rows": 1198,
+    "total_aud": 3112806.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Balanced P Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 634.0% (expected ~100%)"
+    ],
+    "rows": 1553,
+    "total_aud": 604580800.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Growth A Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 636.3% (expected ~100%)"
+    ],
+    "rows": 1508,
+    "total_aud": 754156313.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Sustainable Balanced P Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 634.9% (expected ~100%)"
+    ],
+    "rows": 553,
+    "total_aud": 52482903.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Overseas Shares A Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 92.2% (expected ~100%)"
+    ],
+    "rows": 1198,
+    "total_aud": 30434808.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Capital Stable P Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 633.9% (expected ~100%)"
+    ],
+    "rows": 1553,
+    "total_aud": 299003425.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Balanced A Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 634.0% (expected ~100%)"
+    ],
+    "rows": 1636,
+    "total_aud": 9866780946.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Long Term P Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 632.8% (expected ~100%)"
+    ],
+    "rows": 1536,
+    "total_aud": 26886026.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Australian Shares P Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 95.7% (expected ~100%)",
+      "G3 34.6% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 257,
+    "total_aud": 18507324.0
+  },
+  {
+    "fund_id": "caresuper",
+    "option_name": "Alternative Growth P Cs",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 633.7% (expected ~100%)"
+    ],
+    "rows": 1546,
+    "total_aud": 5715824.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Table_COMBINED",
+    "passed": false,
+    "reasons": [
+      "G3 51.2% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 29604,
+    "total_aud": 40187283084.63975
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Growth Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 94.3% (expected ~100%)"
+    ],
+    "rows": 1812,
+    "total_aud": 19728570.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Capital Stable Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 89.4% (expected ~100%)"
+    ],
+    "rows": 1812,
+    "total_aud": 133327633.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Balanced Growth Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 93.8% (expected ~100%)"
+    ],
+    "rows": 1812,
+    "total_aud": 68058675.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Growth Plus Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 92.0% (expected ~100%)"
+    ],
+    "rows": 1788,
+    "total_aud": 24837482.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Balanced Growth Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 93.8% (expected ~100%)"
+    ],
+    "rows": 1812,
+    "total_aud": 69522084.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Defined Benefit",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 93.7% (expected ~100%)"
+    ],
+    "rows": 1812,
+    "total_aud": 44839712.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Index Diversified Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 67.4% (expected ~100%)"
+    ],
+    "rows": 1348,
+    "total_aud": 24950506.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Balanced Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 91.9% (expected ~100%)"
+    ],
+    "rows": 1812,
+    "total_aud": 78598688.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Growth Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 94.3% (expected ~100%)"
+    ],
+    "rows": 1812,
+    "total_aud": 15697754.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Mysuper Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 93.8% (expected ~100%)"
+    ],
+    "rows": 1813,
+    "total_aud": 404571812.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Capital Stable Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 89.4% (expected ~100%)"
+    ],
+    "rows": 1812,
+    "total_aud": 83796936.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Australian Shares Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 88.1% (expected ~100%)",
+      "G3 61.2% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 269,
+    "total_aud": 10798168.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Overseas Shares Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 93.5% (expected ~100%)",
+      "G3 27.5% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1336,
+    "total_aud": 2365650.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Growth Plus Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 92.0% (expected ~100%)"
+    ],
+    "rows": 1789,
+    "total_aud": 171745751.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Balanced Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 91.9% (expected ~100%)"
+    ],
+    "rows": 1812,
+    "total_aud": 119726806.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Australian Shares Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 88.1% (expected ~100%)",
+      "G3 61.2% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 269,
+    "total_aud": 39821058.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Overseas Shares Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 93.5% (expected ~100%)",
+      "G3 27.5% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1336,
+    "total_aud": 10444167.0
+  },
+  {
+    "fund_id": "equip",
+    "option_name": "Equip Index Diversified Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 67.5% (expected ~100%)"
+    ],
+    "rows": 1348,
+    "total_aud": 18376330.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Defensive Accum December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 93.8% (expected ~100%)"
+    ],
+    "rows": 2030,
+    "total_aud": 316076087.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Balanced Income December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 93.3% (expected ~100%)",
+      "G3 31.9% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 2030,
+    "total_aud": 405483347.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Intl Share Income December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 94.5% (expected ~100%)",
+      "G3 91.3% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1738,
+    "total_aud": 63999648.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Financial Services Guide",
+    "passed": false,
+    "reasons": [
+      "G3 100.0% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G6 reporting date ['2025-11-28'] differs from snapshot 2025-12-31"
+    ],
+    "rows": 5,
+    "total_aud": 18565.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Aust Share Income December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 94.7% (expected ~100%)",
+      "G3 91.2% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 219,
+    "total_aud": 83932930.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Retireplus Income December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 90.8% (expected ~100%)",
+      "G3 30.5% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 2029,
+    "total_aud": 372615904.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Intl Share Accum December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 94.5% (expected ~100%)",
+      "G3 91.3% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1738,
+    "total_aud": 383409707.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Diversified Income December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 90.2% (expected ~100%)",
+      "G3 48.9% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 2029,
+    "total_aud": 1212441637.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Mysuper December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 90.1% (expected ~100%)"
+    ],
+    "rows": 2048,
+    "total_aud": 6124879418.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Balanced Accum December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 93.3% (expected ~100%)",
+      "G3 31.9% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 2030,
+    "total_aud": 464785778.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Defensive Income December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 93.8% (expected ~100%)"
+    ],
+    "rows": 2030,
+    "total_aud": 428574016.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Highgwth Income December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 91.2% (expected ~100%)",
+      "G3 53.1% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1996,
+    "total_aud": 104013750.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Aust Share Accum December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 94.7% (expected ~100%)",
+      "G3 91.2% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 219,
+    "total_aud": 479262546.0
+  },
+  {
+    "fund_id": "ngs",
+    "option_name": "Highgwth Accum December 2025",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 91.3% (expected ~100%)",
+      "G3 52.7% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1999,
+    "total_aud": 772296674.0
+  },
+  {
+    "fund_id": "prime",
+    "option_name": "Investment Choice Form",
+    "passed": false,
+    "reasons": [
+      "G3 100.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 1,
+    "total_aud": 675.0
+  },
+  {
+    "fund_id": "australianethical",
+    "option_name": "Table1",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 826.0% (expected ~100%)",
+      "G3 85.0% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 5305,
+    "total_aud": 9682698170.0
+  },
+  {
+    "fund_id": "australianethical",
+    "option_name": "Ae Guide To Our Ethical Investment Process",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 3978.0% (expected ~100%)",
+      "G3 80.3% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G5 only 17 rows for a diversified option \u2014 likely partial parse",
+      "G6 reporting date ['2025-10-28'] differs from snapshot 2025-12-31"
+    ],
+    "rows": 17,
+    "total_aud": 7520.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Disclosure Dec 2025 Austr",
+    "passed": false,
+    "reasons": [
+      "G3 35.3% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 3,
+    "total_aud": 17118276.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Australian Property Pension",
+    "passed": false,
+    "reasons": [
+      "G3 33.7% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 3,
+    "total_aud": 4447565.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Australian Shares Super",
+    "passed": false,
+    "reasons": [
+      "G3 66.8% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 4,
+    "total_aud": 30245938.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Balanced Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 212.2% (expected ~100%)",
+      "G3 76.9% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G5 only 18 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 18,
+    "total_aud": 215345653.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Stable Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 166.3% (expected ~100%)",
+      "G3 81.7% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G5 only 18 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 18,
+    "total_aud": 29382360.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Growth Plus Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 301.8% (expected ~100%)",
+      "G3 71.2% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G5 only 19 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 19,
+    "total_aud": 2191087.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Stable Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 166.0% (expected ~100%)",
+      "G3 81.4% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G5 only 18 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 18,
+    "total_aud": 75389971.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Growth Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 255.2% (expected ~100%)",
+      "G3 76.8% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G5 only 13 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 13,
+    "total_aud": 913647474.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "International Shares Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 298.1% (expected ~100%)",
+      "G3 66.8% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 6,
+    "total_aud": 36096937.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Growth Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 253.3% (expected ~100%)",
+      "G3 76.7% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G5 only 13 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 13,
+    "total_aud": 42032028.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Global Property Super",
+    "passed": false,
+    "reasons": [
+      "G3 35.7% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 4,
+    "total_aud": 2571042.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Balanced Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 213.2% (expected ~100%)",
+      "G3 76.8% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G5 only 18 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 18,
+    "total_aud": 4244913591.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Australian Shares Pension",
+    "passed": false,
+    "reasons": [
+      "G3 66.8% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 4,
+    "total_aud": 5714444.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "International Shares Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 298.5% (expected ~100%)",
+      "G3 66.7% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 6,
+    "total_aud": 7865783.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Global Property Pension",
+    "passed": false,
+    "reasons": [
+      "G3 33.4% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 4,
+    "total_aud": 881195.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Cash Pension",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 290.9% (expected ~100%)",
+      "G3 71.2% unclassified (Other) \u2014 check asset_class_map.csv"
+    ],
+    "rows": 19,
+    "total_aud": 58027028.0
+  },
+  {
+    "fund_id": "reisuper",
+    "option_name": "Growth Plus Super",
+    "passed": false,
+    "reasons": [
+      "G1 disclosed weights sum to 290.9% (expected ~100%)",
+      "G3 71.2% unclassified (Other) \u2014 check asset_class_map.csv",
+      "G5 only 19 rows for a diversified option \u2014 likely partial parse"
+    ],
+    "rows": 19,
+    "total_aud": 58027028.0
+  }
+]
