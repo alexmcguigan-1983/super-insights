@@ -88,23 +88,44 @@ jobs:
           name: raw-${{ steps.snap.outputs.snapshot }}
           path: raw/${{ steps.snap.outputs.snapshot }}
           retention-days: 90
-      - name: Prepare pull request body (GitHub caps PR descriptions at 65,536 characters)
-        run: head -c 60000 reports/qa_${{ steps.snap.outputs.snapshot }}.md > /tmp/pr_body.md
       - name: Open pull request with the new snapshot
-        uses: peter-evans/create-pull-request@v7
-        with:
-          branch: ${{ steps.snap.outputs.branch }}
-          title: "data: snapshot ${{ steps.snap.outputs.snapshot }}"
-          commit-message: "data: refresh snapshot ${{ steps.snap.outputs.snapshot }}"
-          body-path: /tmp/pr_body.md
-          add-paths: |
-            curated/**
-            site/data/**
-            reports/**
-            quarantine/**/reasons.json
-            config/**
-            seed/**
-          labels: data-refresh
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SNAP: ${{ steps.snap.outputs.snapshot }}
+          BRANCH: ${{ steps.snap.outputs.branch }}
+        run: |
+          set -euxo pipefail
+          exec > >(tee /tmp/pr_step.log) 2>&1
+          git config user.name "super-insights-bot"
+          git config user.email "super-insights-bot@users.noreply.github.com"
+          # Never try to commit a file GitHub will reject (100 MB limit); note it in the QA report instead.
+          find curated site/data reports quarantine config seed -type f -size +95M 2>/dev/null > /tmp/too_big.txt || true
+          if [ -s /tmp/too_big.txt ]; then
+            printf '\n\n> Files not committed (over GitHub 100 MB limit):\n' >> "reports/qa_${SNAP}.md"
+            sed 's/^/> - /' /tmp/too_big.txt >> "reports/qa_${SNAP}.md"
+            while read -r f; do echo "$f" >> .git/info/exclude; done < /tmp/too_big.txt
+          fi
+          git checkout -B "$BRANCH"
+          git add -A -- curated site/data reports config seed 2>/dev/null || true
+          find quarantine -name reasons.json -print0 2>/dev/null | xargs -0 -r git add -f --
+          if git diff --cached --quiet; then echo "Nothing changed; no pull request needed."; exit 0; fi
+          git commit -q -m "data: refresh snapshot ${SNAP}"
+          git push -f origin "$BRANCH"
+          gh label create data-refresh --color 0E8A16 --description "Six-monthly data snapshot" --force || true
+          head -c 60000 "reports/qa_${SNAP}.md" > /tmp/pr_body.md
+          if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
+            gh pr edit "$BRANCH" --title "data: snapshot ${SNAP}" --body-file /tmp/pr_body.md
+          else
+            gh pr create --base main --head "$BRANCH" --title "data: snapshot ${SNAP}" --body-file /tmp/pr_body.md --label data-refresh
+          fi
+      - name: If the pull request step failed, put its log in an issue so it can be read without runner access
+        if: failure() && steps.pr.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          { echo "The pull request step of run ${{ github.run_id }} failed. Last 150 log lines:"; echo; echo '```'; tail -n 150 /tmp/pr_step.log 2>/dev/null || echo "(no log)"; echo '```'; } > /tmp/issue.md
+          gh issue create --title "refresh: PR step failed for snapshot ${{ steps.snap.outputs.snapshot }}" --body-file /tmp/issue.md || true
       - name: Open a repair issue when something failed
         if: steps.report.outputs.failures != '0'
         uses: actions/github-script@v7
