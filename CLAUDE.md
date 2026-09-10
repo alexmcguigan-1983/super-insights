@@ -16,6 +16,13 @@ and APRA statistics into a dashboard. Read `docs/ARCHITECTURE.md` first, then `d
 - Do not change the ten buckets, the schema in `pipeline/__init__.py`, or the validation gates without a note in the PR.
 
 ## Common tasks
+- A manager shows too little AUM in the league table: add its disclosed spellings to `config/managers.csv` (manager-level
+  lines are matched by name only when the line is unlisted and has no ISIN/ticker), re-run `enrich` then `build`.
+  Segregated listed mandates can never be attributed — they are disclosed as securities.
+- A fund's default option is not flagged: fix its pattern in `config/default_options.csv` (set verified=1 once checked
+  against the PDS) and re-run `build`.
+- Reclassify a hedge-fund strategy: edit strategy_family in `config/managers.csv` or add a keyword row to
+  `config/alternatives_strategy_map.csv`, then `build`.
 - Repair a fund after a refresh: open `reports/repair_<snapshot>.md` and follow its "How to repair" section.
 - Add a fund: row in `config/sources.csv`, then harvest → ingest → (adapter if needed) → build.
 - APRA column renamed: adjust `COLUMN_HINTS` in `pipeline/apra.py`.

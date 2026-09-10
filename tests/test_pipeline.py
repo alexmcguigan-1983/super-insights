@@ -121,4 +121,4 @@ def test_full_build(tmp_path):
     opts = json.loads((ROOT / "site/data/2025-12-31-demo/options.json").read_text())
     assert all("peer_delta" in o for o in opts)
     mg = json.loads((ROOT / "site/data/2025-12-31-demo/managers.json").read_text())
-    assert mg["league"][0]["manager"] == "IFM"
+    assert mg["league"][0]["manager"] == "IFM Investors"

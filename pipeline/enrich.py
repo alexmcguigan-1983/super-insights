@@ -14,7 +14,7 @@ import pandas as pd
 import requests
 
 from . import CURATED
-from .normalise import resolve_manager
+from .normalise import resolve_manager, resolve_manager_from_holding_name
 
 OPENFIGI_URL = "https://api.openfigi.com/v3/mapping"
 CACHE = CURATED / "security_master.parquet"
@@ -91,7 +91,20 @@ def apply_security_master(holdings: pd.DataFrame, master: pd.DataFrame) -> pd.Da
 
 
 def resolve_managers(holdings: pd.DataFrame) -> pd.DataFrame:
+    """Two passes. (1) manager_name_raw through the alias table. (2) For unlisted lines with no security identifier
+    whose holding name IS a manager entity (the way pooled mandates are disclosed: 'IFM Investors', 'Blackrock'),
+    match the holding name against the alias table and mark the line External-pooled. Pass 2 is what makes the
+    manager league table complete for reference-imported rows, which carry no management_type."""
     df = holdings.copy()
     missing = df["manager_id"].fillna("") == ""
     df.loc[missing, "manager_id"] = df.loc[missing, "manager_name_raw"].fillna("").apply(resolve_manager)
+    no_id = (df["isin"].fillna("") == "") & (df["ticker"].fillna("") == "") & (df["sedol"].fillna("") == "")
+    cand = (df["manager_id"].fillna("") == "") & no_id & (pd.to_numeric(df["is_listed"], errors="coerce").fillna(0) == 0)
+    hit = df.loc[cand, "holding_name_raw"].fillna("").apply(resolve_manager_from_holding_name)
+    ok = hit.astype(bool)
+    idx = hit[ok].index
+    df.loc[idx, "manager_id"] = hit[ok]
+    df.loc[idx, "manager_name_raw"] = df.loc[idx, "holding_name_raw"]
+    df.loc[idx, "management_type"] = "External-pooled"
+    df.loc[idx, "data_quality_flag"] = df.loc[idx, "data_quality_flag"].fillna("").astype(str) + "; manager resolved from holding name"
     return df

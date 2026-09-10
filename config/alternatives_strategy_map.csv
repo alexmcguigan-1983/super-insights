@@ -1,0 +1,26 @@
+pattern,strategy,style,note
+hedge fund - fund of funds,Fund of hedge funds / multi-manager,Hedge fund,strategy_family match
+hedge fund - multi-strategy,Multi-strategy,Hedge fund,strategy_family match
+hedge fund - long/short equity,Long/short equity,Hedge fund,strategy_family match
+hedge fund - global macro & cta,Global macro & CTA / trend,Hedge fund,strategy_family match
+hedge fund - event-driven & credit,Event-driven & credit hedge,Hedge fund,strategy_family match
+hedge fund - distressed & credit,Distressed & credit hedge,Hedge fund,strategy_family match
+hedge fund - credit,Credit hedge / relative value,Hedge fund,strategy_family match
+hedge fund - insurance-linked,Insurance-linked & catastrophe,Hedge fund,strategy_family match
+related-party pooled vehicle,Related-party pooled vehicle (look-through unavailable),Other,strategy_family match
+implemented / multi-manager|multi-manager,Multi-asset / implemented multi-manager,Diversifier,strategy_family match
+real assets,Real assets (agriculture; timber; water),Real assets,strategy_family match
+volatility|vol arb|tail risk|convex,Volatility & tail-risk,Hedge fund,name match
+long short|long/short|market neutral|absolute return,Long/short equity,Hedge fund,name match
+macro|trend|managed futures|cta\b|systematic,Global macro & CTA / trend,Hedge fund,name match
+multi-strategy|multi strategy|multistrat,Multi-strategy,Hedge fund,name match
+event driven|event-driven|merger arb|special situations,Event-driven & credit hedge,Hedge fund,name match
+distressed|opportunistic credit|structured credit,Distressed & credit hedge,Hedge fund,name match
+insurance linked|insurance-linked|catastrophe|\bils\b|reinsurance,Insurance-linked & catastrophe,Hedge fund,name match
+gold|silver|bullion|commodit,Commodities & precious metals,Real assets,name match
+agricultur|farmland|timber|forestry|water entitlement,Real assets (agriculture; timber; water),Real assets,name match
+royalt,Royalties & specialty finance,Diversifier,name match
+private credit|direct lending|senior loan|leveraged loan,Private credit (held under Alternatives),Private credit,name match
+private credit,Private credit (held under Alternatives),Private credit,strategy_family match
+private markets|private equity|venture capital,Private markets / PE (held under Alternatives),Private markets,strategy_family match
+active equity|index & systematic|fixed income,Traditional manager (held under Alternatives),Other,strategy_family match

@@ -1,0 +1,31 @@
+fund_id,option_pattern,mysuper_product,verified,note
+australiansuper,^Balanced$,Balanced,1,MySuper option is Balanced
+art,^Lifecycle,Lifecycle,1,Sunsuper/ART Lifecycle is the MySuper default (stage shown is the largest)
+aware,^(Accumulation )?High Growth$|Lifecycle,MySuper Lifecycle (High Growth to age 55),1,Aware MySuper Lifecycle starts in High Growth
+hostplus,^Balanced$,Balanced,1,MySuper option is Balanced
+unisuper,^Balanced$,Balanced,1,MySuper option is Balanced
+rest,^(Core Strategy|Growth)$,Core Strategy,0,Rest's MySuper is Core Strategy; the reference dataset labels the $83bn default option 'Growth'
+cbus,MySuper|^Growth \(MySuper\)$,Growth (MySuper),1,
+hesta,^Balanced Growth,Balanced Growth,1,
+cfs,Lifestage|MySuper,FirstChoice Lifestage,0,
+mercer,SmartPath|MySuper,Mercer SmartPath,0,
+mlc,MySuper,MLC MySuper,0,
+amp,MySuper|Lifecycle,AMP MySuper Lifecycle,0,
+caresuper,^Balanced$|MySuper,Balanced,0,
+csc_pssap,MySuper Balanced|^Balanced$,MySuper Balanced,0,
+brighter,^Balanced$|MySuper,Balanced,0,LGIAsuper/Energy Super defaults were Balanced/MySuper
+equip,MySuper|^Balanced Growth$,Equip MySuper,0,
+vision,^Balanced Growth$|MySuper,Balanced Growth,0,
+team,MySuper|Lifecycle|^High Growth$,Team Super MySuper Lifecycle,0,Mine Super's default was High Growth (lifecycle); verify post-merger
+telstra,MySuper|Lifecycle|^Balanced$,MySuper,0,
+ngs,^Diversified(?! Bond)|MySuper,Diversified (MySuper),0,
+prime,MySuper,MySuper/Balanced,1,
+bussq,^Balanced Growth$|MySuper,Balanced Growth (MySuper),1,
+legalsuper,MySuper Balanced|^Balanced$,MySuper Balanced,0,
+guild,MySuper,MySuper lifestage,1,
+firstsuper,^Balanced$|MySuper,Balanced (MySuper),1,
+australianethical,^Balanced$,Balanced (MySuper),1,
+futuresuper,,,1,No MySuper product
+smartmonday,Lifecycle|MySuper,Lifecycle,0,
+vanguard,Lifecycle,Lifecycle,1,
+reisuper,^Balanced$|MySuper,Balanced (MySuper),0,

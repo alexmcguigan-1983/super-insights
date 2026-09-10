@@ -95,6 +95,57 @@ def resolve_manager(name: str) -> str:
     return ""
 
 
+def resolve_manager_from_holding_name(name: str) -> str:
+    """Stricter matcher for holding names that ARE a manager entity (manager-level lines with no security).
+
+    Only exact alias keys or word-bounded aliases of >= 6 characters match, so a listed company that merely shares a
+    word with a manager (e.g. 'Macquarie Group Ltd' vs 'macquarie asset management') does not resolve.
+    """
+    key = _mkey(name)
+    if not key:
+        return ""
+    m = _managers()
+    if key in m:
+        return m[key]["manager_id"]
+    for alias, row in m.items():
+        if len(alias) >= 6 and re.search(r"(?<![a-z0-9])" + re.escape(alias) + r"(?![a-z0-9])", key):
+            return row["manager_id"]
+    return ""
+
+
+def manager_info(manager_id: str) -> dict:
+    """First alias row for a manager_id (name, parent, hq, strategy_family)."""
+    for row in _managers().values():
+        if row["manager_id"] == manager_id:
+            return row
+    return {}
+
+
+@lru_cache(maxsize=1)
+def _default_options() -> list[dict]:
+    p = CONFIG / "default_options.csv"
+    if not p.exists():
+        return []
+    with open(p, newline="", encoding="utf-8") as f:
+        rows = [r for r in csv.DictReader(f) if r.get("option_pattern")]
+    for r in rows:
+        r["rx"] = re.compile(r["option_pattern"], re.I)
+    return rows
+
+
+def apply_default_options(df):
+    """Set is_default=1 (and option_type='Default') where option_name matches the fund's MySuper pattern in
+    config/default_options.csv. Existing is_default=1 rows are kept."""
+    if df is None or not len(df) or not _default_options():
+        return df
+    df = df.copy()
+    for r in _default_options():
+        mask = (df["fund_id"] == r["fund_id"]) & df["option_name"].astype(str).apply(lambda x: bool(r["rx"].search(x)))
+        if mask.any():
+            df.loc[mask, "is_default"] = 1
+    return df
+
+
 def split_identifier(raw: str) -> tuple[str, str, str]:
     s = (raw or "").strip().upper()
     if ISIN_RE.match(s):
