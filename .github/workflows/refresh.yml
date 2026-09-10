@@ -87,14 +87,16 @@ jobs:
         with:
           name: raw-${{ steps.snap.outputs.snapshot }}
           path: raw/${{ steps.snap.outputs.snapshot }}
-          retention-days: 400
+          retention-days: 90
+      - name: Prepare pull request body (GitHub caps PR descriptions at 65,536 characters)
+        run: head -c 60000 reports/qa_${{ steps.snap.outputs.snapshot }}.md > /tmp/pr_body.md
       - name: Open pull request with the new snapshot
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           branch: ${{ steps.snap.outputs.branch }}
           title: "data: snapshot ${{ steps.snap.outputs.snapshot }}"
           commit-message: "data: refresh snapshot ${{ steps.snap.outputs.snapshot }}"
-          body-path: reports/qa_${{ steps.snap.outputs.snapshot }}.md
+          body-path: /tmp/pr_body.md
           add-paths: |
             curated/**
             site/data/**
