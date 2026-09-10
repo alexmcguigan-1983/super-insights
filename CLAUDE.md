@@ -19,3 +19,5 @@ and APRA statistics into a dashboard. Read `docs/ARCHITECTURE.md` first, then `d
 - Repair a fund after a refresh: open `reports/repair_<snapshot>.md` and follow its "How to repair" section.
 - Add a fund: row in `config/sources.csv`, then harvest → ingest → (adapter if needed) → build.
 - APRA column renamed: adjust `COLUMN_HINTS` in `pipeline/apra.py`.
+- Update a fund's member profile or press themes: edit `config/build_fund_profiles.py` (every claim needs a source URL
+  and date; mark heritage-based reasoning as "Inferred:"), run it, commit the regenerated `site/data/fund_profiles.json`.
