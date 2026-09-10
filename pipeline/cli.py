@@ -72,10 +72,18 @@ def cmd_ingest(args):
     good, bad = apply_quarantine(all_df, results, snapshot)
     dest = CURATED / snapshot
     dest.mkdir(parents=True, exist_ok=True)
-    if args.append and (dest / "holdings.parquet").exists():
+    if (dest / "holdings.parquet").exists():
         old = pd.read_parquet(dest / "holdings.parquet")
-        old = old[~old["fund_id"].isin(good["fund_id"].unique())]
-        good = pd.concat([old, good], ignore_index=True)
+        loaded = good["fund_id"].unique()
+        if args.append:
+            keep = old[~old["fund_id"].isin(loaded)]
+        else:
+            # A full ingest replaces primary data, but reference-imported rows (seed dataset) are kept for
+            # any fund the primary harvest did not load, so a first run never deletes day-one content.
+            keep = old[(old["pipeline_version"] == "reference-import") & ~old["fund_id"].isin(loaded)]
+        if len(keep):
+            print(f"keeping {len(keep):,} existing rows for {keep['fund_id'].nunique()} fund(s) not loaded this run")
+        good = pd.concat([keep, good], ignore_index=True)
     good.to_parquet(dest / "holdings.parquet", index=False)
     manifest_p = RAW / snapshot / "manifest.json"
     report = qa_report(results, snapshot, json.loads(manifest_p.read_text()) if manifest_p.exists() else None)
