@@ -85,7 +85,7 @@ footer{max-width:1280px;margin:0 auto;padding:12px 24px 40px;color:var(--muted);
 <script>
 const BUCKETS=["Australian Equity","International Equity","Australian Fixed Income","International Fixed Income","Infrastructure","Property","Private Equity","Alternatives","Cash","Other"];
 const SLOT={};BUCKETS.forEach((b,i)=>SLOT[b]=`var(--s${i+1})`);
-const PAGES=[["overview","Market Overview"],["compare","Fund Comparison"],["explorer","Holdings Explorer"],["fund","Fund Deep-Dive"],["profiles","Fund Profiles"],["managers","Manager League"],["fees","Fees & Economics"],["drift","Target vs Actual"],["timeseries","Time Series"],["apra","APRA Strategic Allocation"],["quality","Data Quality"],["method","Methodology"]];
+const PAGES=[["overview","Market Overview"],["compare","Fund Comparison"],["explorer","Holdings Explorer"],["fund","Fund Deep-Dive"],["profiles","Fund Profiles"],["owners","Asset Owners"],["managers","Manager League"],["fees","Fees & Economics"],["drift","Target vs Actual"],["timeseries","Time Series"],["apra","APRA Strategic Allocation"],["quality","Data Quality"],["method","Methodology"]];
 const state={snap:null,index:null,cache:{}};
 const $=s=>document.querySelector(s);
 const fmt$=v=>v==null||isNaN(v)?"—":Math.abs(v)>=1e9?`$${(v/1e9).toFixed(1)}bn`:Math.abs(v)>=1e6?`$${(v/1e6).toFixed(0)}m`:Math.abs(v)>=1e3?`$${(v/1e3).toFixed(0)}k`:`$${v.toFixed(0)}`;
@@ -200,6 +200,32 @@ views.profiles=async(m,params)=>{const r=await fetch("data/fund_profiles.json");
       ${f.themes.length?`<div style="margin-top:8px"><span class="note">Values the membership has expressed</span>${f.themes.filter(x=>!t||x.theme===t).map(x=>`<p style="margin:4px 0 0">${chip(x.theme)} ${esc(x.evidence)} <a class="note" href="${esc(x.source)}" target="_blank" rel="noopener">${esc(x.date)} ↗</a></p>`).join("")}</div>`:`<p class="note" style="margin-top:8px">No member-values coverage recorded.</p>`}
       <p class="note" style="margin:8px 0 0"><a href="#fund?fund_id=${esc(f.fund_id)}">Holdings deep-dive →</a></p></div>`).join("");};
   ["pt","pf"].forEach(id=>$("#"+id).onchange=render);$("#pq").oninput=render;if(params.get("theme")){$("#pt").value=params.get("theme");}render();};
+views.owners=async(m)=>{const r=await fetch("data/asset_owners.json");const A=r.ok?await r.json():null;if(!A){m.innerHTML="<p>No asset-owner data.</p>";return;}
+  const badge=(v,lbl)=>`<span class="pill ${v==="full"?"ok":v==="partial"?"est":""}" title="${esc(lbl)}: ${esc(v)}">${esc(lbl)}: ${esc(v)}</span>`;
+  const conf=c=>c==="sourced"?'<span class="pill ok">sourced</span>':'<span class="pill est">partly to confirm</span>';
+  m.innerHTML=`<div class="eyebrow">Beyond superannuation</div><h2>Asset Owners</h2>
+  <p class="note">Sovereign and state investment funds, state insurers, New Zealand Crown investors and life insurers with investment products — what each publishes, and where. These sit outside the Portfolio Holdings Disclosure regime, so the table records disclosure <i>coverage</i> rather than holdings. Figures carry their as-at date; "to confirm" means no primary-source figure was verified yet.</p>
+  <div class="card"><b>How to read this universe</b>${A.context.map(c=>`<p style="margin:8px 0 0">${esc(c)}</p>`).join("")}</div>
+  <div class="controls"><label>Group <select id="og"><option value="">All</option>${A.groups.map(g=>`<option>${esc(g)}</option>`).join("")}</select></label>
+  <label>Publishes managers <select id="om"><option value="">Any</option><option>full</option><option>partial</option><option>none</option></select></label>
+  <label>Publishes holdings <select id="oh"><option value="">Any</option><option>full</option><option>partial</option><option>none</option></select></label>
+  <label>Search <input id="oq" placeholder="entity, manager, mandate…"></label> <span class="note" id="oc"></span></div><div id="olist"></div>`;
+  const render=()=>{const g=$("#og").value,mm=$("#om").value,hh=$("#oh").value,q=$("#oq").value.toLowerCase();
+    const es=A.entities.filter(e=>(!g||e.group===g)&&(!mm||e.managers_published===mm)&&(!hh||e.holdings_published===hh)&&(!q||JSON.stringify(e).toLowerCase().includes(q)));
+    $("#oc").textContent=`${es.length} of ${A.entities.length} entities`;
+    let html="";A.groups.forEach(gr=>{const rows=es.filter(e=>e.group===gr).sort((a,b)=>(b.aum_bn||0)-(a.aum_bn||0));if(!rows.length)return;
+      html+=`<h3 style="margin:18px 0 6px">${esc(gr)}</h3>`;
+      html+=rows.map(e=>{const alloc=Object.entries(e.allocation||{});const total=alloc.reduce((a,[,v])=>a+v,0);
+        return `<div class="card"><div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline"><div><b style="font-size:16px">${esc(e.name)}</b> <span class="note">${esc(e.jurisdiction)}</span></div><div>${badge(e.managers_published,"managers")} ${badge(e.holdings_published,"holdings")} ${conf(e.confidence)}</div></div>
+        <div class="grid2" style="margin-top:8px"><div><div class="note">Size</div><b>${e.aum_bn?esc(e.currency)+e.aum_bn.toFixed(1)+"bn":"to confirm"}</b> <span class="note">${esc(e.aum_asof)}</span>
+          <p style="margin:6px 0 0"><span class="note">Run by</span><br>${esc(e.run_by)}</p><p style="margin:6px 0 0"><span class="note">Refresh</span><br>${esc(e.cadence)}</p></div>
+          <div><p style="margin:0"><span class="note">Mandate</span><br>${esc(e.mandate)}</p>${e.notes?`<p class="note" style="margin:6px 0 0">${esc(e.notes)}</p>`:""}</div></div>
+        ${alloc.length?`<div style="margin-top:8px"><span class="note">Published allocation (%)</span><div class="stack" style="margin-top:4px">${alloc.map(([k,v],i)=>`<i style="width:${v/Math.max(total,100)*100}%;background:var(--s${(i%10)+1})" title="${esc(k)} ${v}%"></i>`).join("")}</div><div class="legend">${alloc.map(([k,v],i)=>`<span style="--c:var(--s${(i%10)+1})">${esc(k)} ${v}%</span>`).join("")}</div></div>`:""}
+        <p style="margin:8px 0 0"><span class="note">Managers</span> ${esc(e.managers_note||"—")} ${e.managers_url?`<a class="note" href="${esc(e.managers_url)}" target="_blank" rel="noopener">source ↗</a>`:""}</p>
+        ${e.holdings_note?`<p style="margin:4px 0 0"><span class="note">Holdings</span> ${esc(e.holdings_note)} ${e.holdings_url?`<a class="note" href="${esc(e.holdings_url)}" target="_blank" rel="noopener">source ↗</a>`:""}</p>`:""}
+        <p class="note" style="margin:6px 0 0">Sources: ${e.sources.map((u,i)=>`<a href="${esc(u)}" target="_blank" rel="noopener">[${i+1}]</a>`).join(" ")}</p></div>`;}).join("");});
+    $("#olist").innerHTML=html||'<p class="note">Nothing matches.</p>';};
+  ["og","om","oh"].forEach(id=>$("#"+id).onchange=render);$("#oq").oninput=render;render();};
 views.quality=async(m)=>{const q=await data("quality");if(!q){m.innerHTML="<p>No quality data.</p>";return;}
   m.innerHTML=`<div class="eyebrow">Provenance</div><h2>Data Quality</h2><p class="lede">Every refresh publishes its own audit: what was harvested, what failed the gates and why, how each row's geography and asset class were determined, and how many identifiers survived parsing.</p>
   <div class="tiles"><div class="tile"><div class="n">${q.identifiers.rows.toLocaleString()}</div><div class="l">rows loaded</div></div><div class="tile"><div class="n">${pct(q.identifiers.isin/q.identifiers.rows*100)}</div><div class="l">rows with ISIN</div></div><div class="tile"><div class="n">${pct(q.identifiers.ticker/q.identifiers.rows*100)}</div><div class="l">rows with ticker</div></div><div class="tile"><div class="n">${q.quarantined.length}</div><div class="l">options quarantined</div></div><div class="tile"><div class="n">${Object.keys(q.harvest_errors).length}</div><div class="l">funds with harvest problems</div></div></div>

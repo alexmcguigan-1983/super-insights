@@ -19,7 +19,8 @@ without prior coding experience.
 | Enrich | OpenFIGI security master; manager alias table | `pipeline/enrich.py` |
 | Fees | Disclosed option fees, disclosed fund expenses, *estimated* manager economics | `pipeline/fees.py` |
 | Build | Aggregates to small JSON files + a DuckDB database | `pipeline/build.py` |
-| Dashboard | Twelve-page static site (no server, no database) | `site/index.html` |
+| Dashboard | Thirteen-page static site (no server, no database) | `site/index.html` |
+| Asset Owners | Registry of Commonwealth/state investment funds, state insurers, NZ Crown investors and life insurers with investment products — size, mandate, allocation, whether managers/holdings are published | `config/build_asset_owners.py` → `site/data/asset_owners.json` |
 | Fund Profiles | Hand-curated, sourced summary of each fund's member base, demographics and the values members express (sustainability, gender equality, work safety…) | `config/build_fund_profiles.py` → `site/data/fund_profiles.json` |
 | Automation | Six-monthly refresh, QA pull request, repair issue / Claude agent, Pages deploy | `.github/workflows/` |
 
@@ -40,6 +41,7 @@ then `python -m pipeline.cli build --snapshot 2025-12-31`.
 
 ```
 config/        sources.csv (fund registry) · asset_class_map.csv · option_type_map.csv · managers.csv · fee_schedule.csv
+               build_asset_owners.py (asset owners beyond super; edit, run, commit site/data/asset_owners.json)
                build_fund_profiles.py (member-base and member-values profiles; edit, then run it to refresh site/data/fund_profiles.json)
 pipeline/      the Python package (see table above)
 raw/           downloaded files per snapshot (not committed; kept as workflow artifacts)

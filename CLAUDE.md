@@ -21,3 +21,6 @@ and APRA statistics into a dashboard. Read `docs/ARCHITECTURE.md` first, then `d
 - APRA column renamed: adjust `COLUMN_HINTS` in `pipeline/apra.py`.
 - Update a fund's member profile or press themes: edit `config/build_fund_profiles.py` (every claim needs a source URL
   and date; mark heritage-based reasoning as "Inferred:"), run it, commit the regenerated `site/data/fund_profiles.json`.
+- Update a sovereign fund / state insurer / life insurer entry: edit `config/build_asset_owners.py` (same rules), run it,
+  commit `site/data/asset_owners.json`. NZ Super Fund's six-monthly Excel disclosure is the first candidate for real
+  holdings ingestion outside super.
