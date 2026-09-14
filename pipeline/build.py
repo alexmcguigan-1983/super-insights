@@ -197,6 +197,21 @@ def build_snapshot(snapshot: str) -> dict:
         "internal_vs_external": [{"fund_id": f, "internal": float(g.loc[g["management_type"] == "Internal", "market_value_aud"].sum()), "external": float(g.loc[g["management_type"] == "External-pooled", "market_value_aud"].sum()),
                                   "unknown": float(g.loc[~g["management_type"].isin(["Internal", "External-pooled"]), "market_value_aud"].sum())} for f, g in h.groupby("fund_id")],
     }
+    # public-record relationships (press releases, manager lists) that PHD cannot show — config/manager_relationships.csv
+    rel_p = Path(__file__).resolve().parents[1] / "config" / "manager_relationships.csv"
+    if rel_p.exists():
+        import csv as _csv
+        with open(rel_p, newline="", encoding="utf-8") as f:
+            rels = list(_csv.DictReader(f))
+        for r in rels:
+            r["manager"] = manager_info(r["manager_id"]).get("manager_name") or r["manager_id"]
+        managers["relationships"] = rels
+        # make sure every manager with a documented relationship appears in the league even with zero disclosed AUD
+        seen = {m["manager"] for m in managers["league"]}
+        for r in rels:
+            if r["manager"] not in seen:
+                managers["league"].append({"manager": r["manager"], "value": 0.0, "funds": 0, "options": 0, "buckets": [], "documented_only": True})
+                seen.add(r["manager"])
     (out_dir / "managers.json").write_text(json.dumps(managers))
 
     # ---- alternatives & hedge funds ---------------------------------------------------------------

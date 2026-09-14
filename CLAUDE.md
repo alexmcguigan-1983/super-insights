@@ -19,6 +19,9 @@ and APRA statistics into a dashboard. Read `docs/ARCHITECTURE.md` first, then `d
 - A manager shows too little AUM in the league table: add its disclosed spellings to `config/managers.csv` (manager-level
   lines are matched by name only when the line is unlisted and has no ISIN/ticker), re-run `enrich` then `build`.
   Segregated listed mandates can never be attributed — they are disclosed as securities.
+- A manager relationship is known from the press or an investor's manager list but invisible in PHD (segregated
+  mandate, non-super investor): add a row to `config/manager_relationships.csv` with a source URL; it appears in the
+  Manager League detail pane and keeps the manager in the league even with zero disclosed AUD.
 - A fund's default option is not flagged: fix its pattern in `config/default_options.csv` (set verified=1 once checked
   against the PDS) and re-run `build`.
 - Reclassify a hedge-fund strategy: edit strategy_family in `config/managers.csv` or add a keyword row to
