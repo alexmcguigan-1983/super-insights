@@ -5,7 +5,7 @@ equity and fixed income books, which managers run money for them, their strategi
 Refreshes itself twice a year with a GitHub Actions agent.
 
 **Start here: [docs/SETUP.md](docs/SETUP.md)** — the numbered checklist to get this running on your own GitHub account
-without prior coding experience.
+without prior coding experience. To require sign-in for viewers, see [docs/ACCESS.md](docs/ACCESS.md).
 
 ## What it does
 
