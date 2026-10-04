@@ -1,0 +1,5 @@
+{
+  "qsps": "failed: Table 8a header row not recognised \u2014 update COLUMN_HINTS in pipeline/apra.py",
+  "fund_level": "failed: Fund-level statistics: no sheet with fund + total assets recognised",
+  "expenses": "no expense workbook link found"
+}
